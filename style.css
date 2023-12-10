@@ -1,0 +1,479 @@
+:root {
+    --main-bg: rgb(255, 255, 255);
+    --second-bg: rgba(68, 81, 91, 0.989);
+    --btn-bg: rgb(255, 255, 255);
+    --w-clr: rgb(0, 0, 0);
+    --ww-clr: rgb(255, 255, 255);
+    --hov: rgb(54, 8, 96);
+    --blog: rgb(197, 198, 203);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--main-bg);
+}
+
+.main-wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+.navbar {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    background-color: var(--second-bg);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-shadow: 20px 20px 60px rgba(139, 139, 143, 0.197);
+}
+
+.logo {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo h2{
+    color: var(--ww-clr);
+}
+
+.btns {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns .btn button {
+    background-color: var(--btn-bg);
+    color: var(--w-clr);
+    padding: 10px 20px;
+    font-size: 17px;
+    offset: 0;
+    border: 0;
+    border-radius: 8px;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+}
+
+.btns .btn button:hover {
+    background-color: var(--hov);
+    color: var(--ww-clr);
+    transform: translate(1px);
+    transition: all ease 0.6s;
+}
+
+.main-display {
+    width: 100%;
+    height: 100vh;
+}
+
+.my-blogs {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blogs-display {
+    width: 80%;
+    height: 100%;
+    max-height: 80%;
+    min-height: 70%;
+    display: flex;
+    background-color: var(--blog);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+    box-shadow: 20px 20px 60px #1e1d1d35, -20px -20px 60px #c1c1c139 inset;
+}
+
+.names {
+    width: 30%;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.names span {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.blog {
+    width: 70%;
+    height: 100%;
+}
+
+.con {
+    width: 100%;
+    height: 100%;
+}
+
+.con img {
+    width: 100%;
+    height: 40%;
+    background-color: #a9abb357;
+    object-fit: contain;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.content {
+    width: 100%;
+    height: auto;
+    max-height: 90%;
+    overflow: auto;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.popup-img-con{
+    display: flex;
+}
+.popup-container {
+    transition: all ease 1s;
+    width: 90%;
+    height: 92%;
+    margin-top: 20px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: var(--second-bg);
+    box-shadow: 20px 20px 60px #1e1d1d35, -20px -20px 60px #c1c1c139 inset;
+    border-radius: 8px;
+    text-align: center;
+    /* Add max-width to prevent the container from becoming too wide on larger screens */
+    /* max-width: 900px; */
+    /* Center the container horizontally on smaller screens */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    /* Add a bit of padding to make it easier to click */
+    padding: 5px;
+}
+
+.popup-content {
+    margin-top: 20px;
+    /* Add max-width to prevent content from stretching too wide on larger screens */
+    max-width: 100%;
+    /* Center the content horizontally on smaller screens */
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/* Add a subtle hover effect to the close button */
+.close-btn:hover {
+    color: #fff; /* Change the color on hover */
+    background-color: #26376d;
+    border-radius: 45%;
+}
+.close-btn{
+    font-size: 30px;
+}
+.popup-content h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--ww-clr);
+
+}
+
+.popup-content input[type="file"] {
+    margin-bottom: 15px;
+}
+
+.popup-content textarea {
+    width: 40%;
+    height: 200px;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.popup-content button {
+    background-color: var(--btn-bg);
+    color: var(--w-clr);
+    padding: 10px 20px;
+    font-size: 17px;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 20%;
+    height: 17%;
+    margin-right: 10px;
+}
+.imgs{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.imgs img{
+    width: 70%;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 2px;
+}
+.popup-content button:hover {
+    background-color: var(--hov);
+    color: var(--ww-clr);
+    transform: translate(1px);
+    transition: all ease 0.6s;
+}
+
+/* Add this to your existing CSS */
+
+#signupPopupContainer,
+#loginPopupContainer {
+    transition: all ease 1s;
+    width: 90%;
+    height: 90%;
+    margin-top: 20px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: var(--second-bg);
+    box-shadow: 20px 20px 60px #1e1d1d35, -20px -20px 60px #c1c1c139 inset;
+    border-radius: 8px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#signupPopupContainer .popup-content,
+#loginPopupContainer .popup-content {
+    margin-top: 20px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Add a subtle hover effect to the close button */
+#signupPopupContainer .close-btn,
+#loginPopupContainer .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#signupPopupContainer .close-btn:hover,
+#loginPopupContainer .close-btn:hover {
+    color: #fff;
+    background-color: #26376d;
+    border-radius: 45%;
+}
+
+#signupPopupContainer .popup-content h2,
+#loginPopupContainer .popup-content h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    /* color: var(--ww-clr); */
+}
+
+#signupPopupContainer .popup-content input[type="text"],
+#signupPopupContainer .popup-content input[type="password"],
+#loginPopupContainer .popup-content input[type="text"],
+#loginPopupContainer .popup-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+#signupPopupContainer .popup-content button,
+#loginPopupContainer .popup-content button {
+    background-color: var(--btn-bg);
+    color: var(--w-clr);
+    padding: 10px 20px;
+    font-size: 17px;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#signupPopupContainer .popup-content button:hover,
+#loginPopupContainer .popup-content button:hover {
+    background-color: var(--hov);
+    color: var(--ww-clr);
+    transform: translate(1px);
+    transition: all ease 0.6s;
+}
+.popup-content progress {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+
+#icon{
+    /* color: rgb(0, 0, 0); */
+    color: red;
+    font-size: 50px;
+    margin-top: 30%;
+}
+#icon-2{
+    /* color: rgb(0, 0, 0); */
+    color: red;
+    font-size: 50px;
+    margin-top: 30%;
+}
+/* Default styles for the side nav */
+.side-nav {
+    width: 50vw;
+    height: 90%;
+    background-color: var(--second-bg);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: -100;
+    top: 10%;
+    display: none;
+}
+
+.btnn {
+    margin-top: 10px;
+}
+
+/* Styles for buttons */
+.btnn button {
+    width: 100%;
+    padding: 10px 30px;
+    margin-bottom: 5px;
+    background-color: var(--btn-bg);
+    color: var(--w-clr);
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Styles for buttons on hover */
+.btnn button:hover {
+    background-color: var(--hov);
+    color: var(--ww-clr);
+    transform: translate(1px);
+    transition: all ease 0.6s;
+}
+#opennav{
+    display: none;
+}
+.users{
+    font-size: 20px;
+    margin-top: 1%;
+    text-decoration: underline;
+    color: var(--ww-clr);
+}
+.close-btn{
+    color: var(--ww-clr);
+    font-style: 30px;
+}
+
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .side-nav{
+        display: block;
+        width: 60vw;
+    }
+    .btnss {
+        flex-direction: row;
+    }
+
+    .btnn {
+        margin: 0 10px;
+    }
+    .btn{
+        display: none;
+    }
+    #opennav{
+        display: block;
+    }
+    .blogs-display{
+        display: block;
+        width: 98%;
+    }
+    .names{
+        width: 100%;
+    }
+    .blog{
+        width: 100%;
+    }
+    .content{
+        padding: 5px 10px;
+    }
+
+
+    
+.popup-img-con{
+    display: block;
+}
+.popup-container {
+    transition: all ease 1s;
+    width: 95%;
+    height: 90%;
+    top: 52%;
+}
+
+.popup-content textarea {
+    width: 90%;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.popup-content button {
+    width: 40%;
+    margin: 10px 25px;
+}
+.imgs{
+    width: 100%;
+    display: block;
+  
+}
+.imgs img{
+    width: 100%;
+}
+.logo{
+    width: 70%;
+    font-size: 15px;
+}
+.users{
+   display: none;
+}
+
+}
+

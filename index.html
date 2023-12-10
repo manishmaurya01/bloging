@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="M-Blogger - A platform for sharing and exploring blogs.">
+    <meta name="keywords" content="M-Blogger, blog, post, social, platform">
+    <meta name="author" content="Your Name">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="M-Blogger">
+    <meta property="og:description" content="A platform for sharing and exploring blogs.">
+    <meta property="og:image" content="https://manishdeveloper.netlify.app/footerimg.png">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>M-Blogger - A Platform for Blogs</title>
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+        <div class="navbar">
+            <div class="logo">
+                <h2>M-Blogger</h2>
+            </div>
+            <span class="users">user:- <strong class="c-user">No.User</strong></span>
+            <div class="btns">
+                <div class="btn">
+                    <button class="login" id="loginBtn">login</button>
+                    <button class="login" id="logoutBtn">logout</button>
+                    <button class="Post" id="openPopupBtn">post</button>
+                </div>
+            </div>
+            <span class="close-btn" id="opennav">&#8801;</span>
+
+        </div>
+        <!-- Side navigation -->
+        <div class="side-nav">
+            <span class="close-btn" id="closesidenav">&times;</span>
+           
+            <div class="btnss">
+ 
+                <div class="btnn">
+                    <span class="userss">user:- <strong class="c-userr">No.User</strong></span>
+                    <br><br>
+                    <button class="login" id="loginBtn2">login</button>
+                    <button class="login" id="logoutBtn2">logout</button>
+                    <button class="Post" id="openPopupBtn2">post</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-display">
+            <!-- blogs are ceate here automaticaly  -->
+
+        </div>
+    </div>
+    <!-- Signup Popup -->
+    <div class="popup-container" id="signupPopupContainer">
+        <span class="close-btn" id="closeSignupPopupBtn">&times;</span>
+
+        <div class="popup-content">
+            <h2>Signup</h2>
+            <input type="text" placeholder="Enter your email" id="signupEmail">
+            <input type="password" placeholder="Enter your password" id="signupPassword">
+            <button class="Signup">Signup</button>
+        </div>
+    </div>
+
+    <!-- Login Popup -->
+    <div class="popup-container" id="loginPopupContainer">
+        <span class="close-btn" id="closeLoginPopupBtn">&times;</span>
+
+        <div class="popup-content">
+            <h2>Login</h2>
+            <input type="text" placeholder="Enter your email" id="loginEmail">
+            <input type="password" placeholder="Enter your password" id="loginPassword">
+            <button class="loginme">Login</button>
+            <button class="login" id="signupBtn">singup</button>
+        </div>
+    </div>
+
+
+    <!-- Popup container -->
+    <div class="popup-container" id="popupContainer">
+        <span class="close-btn" id="closePopupBtn">&times;</span>
+
+        <div class="popup-content">
+            <h2>Upload Blog</h2>
+            <div class="popup-img-con">
+                <div class="imgs">
+
+                    <!-- Add an img element for the image preview -->
+                    <img id="imagePreview" src="#" alt="Image Preview"
+                        style="max-width: 100%; max-height: 200px; display: none;">
+
+                    <input type="file" id="photo" accept="image/*">
+                    <button class="prv">preview</button>
+                </div>
+
+                <textarea id="content" placeholder="Enter your content !max-100words"></textarea>
+            </div>
+
+            <!-- Add progress bar -->
+            <progress id="uploadProgress" value="0" max="100"></progress>
+            <button id="uploadBtn">Upload</button>
+        </div>
+    </div>
+
+
+    <!-- Add script tags for Firebase v8 -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
